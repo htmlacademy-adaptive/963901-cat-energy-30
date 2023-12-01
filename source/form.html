@@ -13,12 +13,8 @@
 			<header class="header">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" href="index.html">
-						<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип">
-						<span class="visually-hidden">Логотип - ссылка на главную страницу</span>
-					</a>
-					<a class="main-navigation__logo-description" href="index.html">
-						<img src="./images/logo-description.svg" width="101" height="18" alt="CAT ENERGY">
-						<span class="visually-hidden">Логотип CAT ENERGY - ссылка на главную страницу</span>
+						<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+						<img src="./images/logo-description.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
 					</a>
 					<button class="main-navigation__toggle" type="button">
 						<span class="visually-hidden">Открыть меню</span>
@@ -39,10 +35,9 @@
 
 
 			<main>
-				<h1 class="visually-hidden">Подбор программы от Cat Energy</h1>
 				
 				<section class="form-request">
-					<h2>Подбор программы</h2>
+					<h1>Подбор программы</h1>
 					<p>Заполните анкету, и мы подберем программу питания для вашего кота</p>
 					<form class="form-request__form" method="get" action="https://echo.htmlacademyru">
 
@@ -52,15 +47,15 @@
 							<ul class="pet-info__list">
 								<li class="pet-info__item">
 									<label for="pet-name">Имя:*</label>
-									<input type="text" id="pet-name" name="pet-name" placeholder="Барсик">
+									<input type="text" id="pet-name" name="pet-name" placeholder="Барсик" required>
 								</li>
 								<li class="pet-info__item">
 									<label for="pet-weight">Вес (кг):*</label>
-									<input type="number" id="pet-weight" name="pet-weight" value="7">
+									<input type="number" id="pet-weight" name="pet-weight" placeholder="7" required>
 								</li>
 								<li class="pet-info__item">
 									<label for="pet-years">Возраст (лет):*</label>
-									<input type="number" id="pet-years" name="pet-years" value="7">
+									<input type="number" id="pet-years" name="pet-years" placeholder="7" required>
 								</li>
 							</ul>
 						</fieldset>
@@ -70,15 +65,15 @@
 							<legend class="visually-hidden">Выбор линейки кормов</legend>
 							<ul class="choice-of-product__list">
 								<li class="choice-of-product__item">
-									<input type="radio" id="weight-loss" name="choice-of-product" value="weight-loss" aria-label="Похудение" checked>
-									<label for="sweight-loss">Похудение</label>
+									<input type="radio" id="weight-loss" name="choice-of-product" value="weight-loss" checked>
+									<label for="weight-loss">Похудение</label>
 								</li>
 								<li class="choice-of-product__item">
-									<input type="radio" id="weight-gain" name="choice-of-product" value="weight-gain" aria-label="Набор массы">
+									<input type="radio" id="weight-gain" name="choice-of-product" value="weight-gain">
 									<label for="weight-gain">Набор массы</label>
 								</li>
 								<li class="choice-of-product__item">
-									<input type="radio" id="not-know" name="choice-of-product" value="not-know" aria-label="Не знаю (нужен ваш совет)">
+									<input type="radio" id="not-know" name="choice-of-product" value="not-know">
 									<label for="not-know">Не знаю (нужен ваш совет)</label>
 								</li>
 							</ul>
@@ -90,11 +85,11 @@
 							<ul class="owner-info__list">
 								<li class="owner-info__item">
 									<label for="owner-email">E-mail:*</label>
-									<input type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com">
+									<input type="email" id="owner-email" name="owner-email" placeholder="kuklachev@gmail.com" required>
 								</li>
 								<li class="owner-info__item">
 									<label for="owner-telephone">Телефон:*</label>
-									<input type="tel" id="owner-telephone" name="owner-telephone" placeholder="8 (960) 900-60-90">
+									<input type="tel" id="owner-telephone" name="owner-telephone" placeholder="8 (960) 900-60-90" required>
 								</li>
 							</ul>
 						</fieldset>
@@ -112,25 +107,25 @@
 							<label class="visually-hidden" for="comment-area">Дополнительно</label>
 							<ul class="additionally__list">
 								<li class="additionally__item">
-									<input type="checkbox" id="sweetener" name="sweetener" value="sweetener" aria-label="Сахарозаменитель" checked>
+									<input type="checkbox" id="sweetener" name="sweetener" value="sweetener" checked>
 									<label for="sweetener">Сахарозаменитель</label>
 								</li>
 								<li class="additionally__item">
-									<input type="checkbox" id="water" name="water" value="water" aria-label="Питьевая вода">
+									<input type="checkbox" id="water" name="water" value="water">
 									<label for="water">Питьевая вода</label>
 								</li>
 								<li class="additionally__item">
-									<input type="checkbox" id="milk" name="milk" value="milk" aria-label="Молоко">
+									<input type="checkbox" id="milk" name="milk" value="milk">
 									<label for="milk">Молоко</label>
 								</li>
 								<li class="additionally__item">
-									<input type="checkbox" id="vitamins" name="vitamins" value="vitamins" aria-label="Витамины">
+									<input type="checkbox" id="vitamins" name="vitamins" value="vitamins">
 									<label for="vitamins">Витамины</label>
 								</li>
 							</ul>
 						</fieldset>
 
-						<button class="button" type="button">Отправить заявку</button>
+						<button class="button" type="submit">Отправить заявку</button>
 						<p>* - Обязательные поля</p>
 					</form>
 				</section>
@@ -144,7 +139,9 @@
 							<p>Санкт-Петербург</p>
 						</address>
 					</div>
-					<div class="address-map"></div>
+					<div class="address-map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.762473087486!2d30.309979649714336!3d59.937275742389886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1701317990021!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Точка на карте"></iframe>
+					</div>
 				</section>
 				
 			</main>
@@ -152,12 +149,11 @@
 
 			<footer class="footer">
 				<a class="footer__logo" href="https://htmlacademy.ru/intensive/adaptive">
-					<img src="./images/logo-footer.svg" width="128" height="24" alt="CAT ENERGY">
-					<span class="visually-hidden">Логотип CAT ENERGY - ссылка на главную страницу</span>
+					<img src="./images/logo-footer.svg" width="128" height="24" alt="Логотип CAT ENERGY - ссылка на главную страницу">
 				</a>
 
 				<!-- Ссылки на социальные страницы -->
-				<ul class="social-media__list">
+				<ul class="social-media">
 					<li class="social-media__item">
 						<a class="social-media__link" href="https://vk.com/htmlacademy" aria-label="В контакте">
 							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
