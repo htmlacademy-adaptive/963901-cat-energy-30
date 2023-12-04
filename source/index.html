@@ -13,8 +13,17 @@
 			<header class="header">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" href="index.html">
-						<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-						<img src="./images/logo-description.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
+						<picture>
+							<!-- Логотип для web версии -->
+							<source media="(min-width: 1440px)" srcset="./images/web-logo.svg">
+
+							<!-- Логотип для tablet версии -->
+							<source media="(min-width: 800px)" srcset="./images/tablet-logo.svg">
+
+							<!-- Логотип для mobile версии -->
+							<img src="./images/mobile-logo.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+							<img src="./images/mobile-logo-text-header.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
+						</picture>
 					</a>
 					<button class="main-navigation__toggle" type="button">
 						<span class="visually-hidden">Открыть меню</span>
