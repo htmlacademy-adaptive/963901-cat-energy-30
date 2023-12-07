@@ -4,8 +4,12 @@
 		<meta charset="UTF-8">
 		<title>Питание для котов CAT ENERGY</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
 		<link rel="stylesheet" href="styles/styles.css">
 		<script src="scripts/index.js" defer></script>
+		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="favicons/icon.svg" type="image/svg+xml"> <!-- 32×32 -->
+		<link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
 	</head>
 
 	<body class="page__body">
@@ -13,16 +17,29 @@
 			<header class="header">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" href="index.html">
+
+						<!-- picture для логотипа-картинки -->
 						<picture>
-							<!-- Логотип для web версии -->
-							<source media="(min-width: 1440px)" srcset="./images/web-logo.svg">
+							<!-- Для web версии -->
+							<source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="./images/logo-web.svg">
 
-							<!-- Логотип для tablet версии -->
-							<source media="(min-width: 800px)" srcset="./images/tablet-logo.svg">
+							<!-- Для tablet версии -->
+							<source width="60" height="50" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-tablet.svg">
 
-							<!-- Логотип для mobile версии -->
-							<img src="./images/mobile-logo.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-							<img src="./images/mobile-logo-text-header.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
+							<!-- Для mobile версии -->
+							<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+						</picture>
+
+						<!-- picture для логотипа-текста -->
+						<picture>
+							<!-- Для web версии -->
+							<source width="118" height="21" media="(min-width: 1440px)" type="image/svg+xml" srcset="./images/logo-text-header-web.svg">
+
+							<!-- Для tablet версии -->
+							<source width="101" height="18" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-text-header-tablet.svg">
+
+							<!-- Для mobile версии -->
+							<img src="./images/logo-text-header-mobile.svg" width="101" height="18" alt="Логотип - ссылка на главную страницу">
 						</picture>
 					</a>
 					<button class="main-navigation__toggle" type="button">
@@ -33,7 +50,7 @@
 							<a class="main-navigation__link" href="index.html">Главная</a>
 						</li>
 						<li class="main-navigation__item">
-							<a class="main-navigation__link" href="#">Каталог продукции</a>
+							<a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
 						</li>
 						<li class="main-navigation__item">
 							<a class="main-navigation__link" href="#">Подбор программы</a>
@@ -47,7 +64,11 @@
 				<section class="promo">
 					<h1>Функциональное питание для котов</h1>
 					<p>Занялся собой? Займись котом!</p>
-					<img src="./images/index-can-mobile.png" width="280" height="270" alt="Банка корма">
+					<picture>
+						<source width="709" height="609" type="image/png" media="(min-width: 1440px)" srcset="./images/index-can-web@1x.png 1x, ./images/index-can-web@2x.png 2x">
+						<source width="552" height="499" type="image/png" media="(min-width: 800px)" srcset="./images/index-can-tablet@1x.png 1x, ./images/index-can-tablet@2x.png 2x">
+						<img src="./images/index-can-mobile@1x.png" srcset="./images/index-can-mobile@2x.png 2x" width="280" height="270" atl="Банка корма">
+					</picture>
 					<a href="form.html">Подобрать программу</a>
 				</section>
 
@@ -98,8 +119,16 @@
 					</dl>
 					<p>Затраты на питание: 15 000 РУБ.</p>
 					<div class="result-slider">
-						<img class="result-slider__image-1" src="./images/cat-before.png" width="280" height="256" alt="Толстый кот">
-						<img class="result-slider__image-2" src="./images/cat-after.png" width="280" height="256" alt="Худой кот">
+						<!-- Состояние слайдера before -->
+						<picture>
+							<source media="(min-width: 800px)" srcset="./images/cat-before-tablet-web@1x.png 1x, ./images/cat-before-tablet-web@2x.png 2x">
+							<img src="./images/cat-before-mobile@1x.png" srcset="./images/cat-before-mobile@2x.png 2x" width="280" height="256" atl="Толстенький котик">
+						</picture>
+						<!-- Состояние слайдера after -->
+						<picture>
+							<source media="(min-width: 800px)" srcset="./images/cat-after-tablet-web@1x.png 1x, ./images/cat-after-tablet-web@2x.png 2x">
+							<img src="./images/cat-after-mobile@1x.png" srcset="./images/cat-after-mobile@2x.png 2x" width="280" height="256" atl="Нормальный котик">
+						</picture>
 					</div>
 				</section>
 

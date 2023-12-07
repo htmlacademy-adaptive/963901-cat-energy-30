@@ -6,6 +6,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<link rel="stylesheet" href="styles/styles.css">
 		<script src="scripts/index.js" defer></script>
+		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="favicons/icon.svg" type="image/svg+xml"> <!-- 32×32 -->
+		<link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
 	</head>
 
 	<body class="page__body">
@@ -13,8 +16,30 @@
 			<header class="header">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" href="index.html">
-						<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-						<img src="./images/logo-description.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
+
+						<!-- picture для логотипа-картинки -->
+						<picture>
+							<!-- Для web версии -->
+							<source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="./images/logo-web.svg">
+
+							<!-- Для tablet версии -->
+							<source width="60" height="50" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-tablet.svg">
+
+							<!-- Для mobile версии -->
+							<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+						</picture>
+
+						<!-- picture для логотипа-текста -->
+						<picture>
+							<!-- Для web версии -->
+							<source width="118" height="21" media="(min-width: 1440px)" type="image/svg+xml" srcset="./images/logo-text-header-web.svg">
+
+							<!-- Для tablet версии -->
+							<source width="101" height="18" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-text-header-tablet.svg">
+
+							<!-- Для mobile версии -->
+							<img src="./images/logo-text-header-mobile.svg" width="101" height="18" alt="Логотип - ссылка на главную страницу">
+						</picture>
 					</a>
 					<button class="main-navigation__toggle" type="button">
 						<span class="visually-hidden">Открыть меню</span>
@@ -24,7 +49,7 @@
 							<a class="main-navigation__link" href="index.html">Главная</a>
 						</li>
 						<li class="main-navigation__item">
-							<a class="main-navigation__link" href="#">Каталог продукции</a>
+							<a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
 						</li>
 						<li class="main-navigation__item">
 							<a class="main-navigation__link" href="#">Подбор программы</a>
