@@ -4,8 +4,14 @@
 		<meta charset="UTF-8">
 		<title>Питание для котов CAT ENERGY</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
 		<link rel="stylesheet" href="styles/styles.css">
 		<script src="scripts/index.js" defer></script>
+		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="favicons/icon-36x36.png"><!-- 32×32 -->
+		<link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"><!-- 180×180 -->
+
+		<link rel="mainfest" href="manifest.webmanifest">
 	</head>
 
 	<body class="page__body">
@@ -13,16 +19,26 @@
 			<header class="header">
 				<nav class="main-navigation">
 					<a class="main-navigation__logo" href="index.html">
+
+						<!-- picture для логотипа-картинки -->
 						<picture>
-							<!-- Логотип для web версии -->
-							<source media="(min-width: 1440px)" srcset="./images/web-logo.svg">
+							<!-- Для web версии -->
+							<source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="./images/logo-web.svg">
 
-							<!-- Логотип для tablet версии -->
-							<source media="(min-width: 800px)" srcset="./images/tablet-logo.svg">
+							<!-- Для tablet версии -->
+							<source width="60" height="50" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-tablet.svg">
 
-							<!-- Логотип для mobile версии -->
-							<img src="./images/mobile-logo.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-							<img src="./images/mobile-logo-text-header.svg" width="101" height="18" alt="Логотип CAT ENERGY - ссылка на главную страницу">
+							<!-- Для mobile версии -->
+							<img src="./images/logo-mobile.svg" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+						</picture>
+
+						<!-- picture для логотипа-текста -->
+						<picture>
+							<!-- Для tablet и web версии -->
+							<source width="101" height="18" media="(min-width: 800px)" type="image/svg+xml" srcset="./images/logo-text-header-tablet.svg">
+
+							<!-- Для mobile версии -->
+							<img src="./images/logo-text-header-mobile.svg" width="101" height="18" alt="Логотип - ссылка на главную страницу">
 						</picture>
 					</a>
 					<button class="main-navigation__toggle" type="button">
@@ -33,7 +49,7 @@
 							<a class="main-navigation__link" href="index.html">Главная</a>
 						</li>
 						<li class="main-navigation__item">
-							<a class="main-navigation__link" href="#">Каталог продукции</a>
+							<a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
 						</li>
 						<li class="main-navigation__item">
 							<a class="main-navigation__link" href="#">Подбор программы</a>
@@ -47,7 +63,11 @@
 				<section class="promo">
 					<h1>Функциональное питание для котов</h1>
 					<p>Занялся собой? Займись котом!</p>
-					<img src="./images/index-can-mobile.png" width="280" height="270" alt="Банка корма">
+					<picture>
+						<source width="709" height="609" type="image/png" media="(min-width: 1440px)" srcset="./images/index-can-web@1x.png 1x, ./images/index-can-web@2x.png 2x">
+						<source width="552" height="499" type="image/png" media="(min-width: 800px)" srcset="./images/index-can-tablet@1x.png 1x, ./images/index-can-tablet@2x.png 2x">
+						<img src="./images/index-can-mobile@1x.png" srcset="./images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Банка корма">
+					</picture>
 					<a href="form.html">Подобрать программу</a>
 				</section>
 
@@ -89,7 +109,7 @@
 				<!-- Описание примера работы корма -->
 				<section class="result">
 					<h2>Живой пример</h2>
-					<p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+					<p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 					<dl>
 						<dt>Снижение веса</dt>
 							<dd>5 кг</dd>
@@ -98,13 +118,22 @@
 					</dl>
 					<p>Затраты на питание: 15 000 РУБ.</p>
 					<div class="result-slider">
-						<img class="result-slider__image-1" src="./images/cat-before.png" width="280" height="256" alt="Толстый кот">
-						<img class="result-slider__image-2" src="./images/cat-after.png" width="280" height="256" alt="Худой кот">
+						<!-- Состояние слайдера before -->
+						<picture>
+							<source type="image/png" media="(min-width: 800px)" srcset="./images/cat-before-tablet-web@1x.png 1x, ./images/cat-before-tablet-web@2x.png 2x">
+							<img src="./images/cat-before-mobile@1x.png" srcset="./images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Толстенький котик">
+						</picture>
+						<!-- Состояние слайдера after -->
+						<picture>
+							<source type="image/png" media="(min-width: 800px)" srcset="./images/cat-after-tablet-web@1x.png 1x, ./images/cat-after-tablet-web@2x.png 2x">
+							<img src="./images/cat-after-mobile@1x.png" srcset="./images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Нормальный котик">
+						</picture>
 					</div>
 				</section>
 
 				<!-- Адрес и карта -->
 				<section class="address">
+					<h2 class="visually-hidden">Адрес магазина CAT ENERGY</h2>
 					<div class="address-title">
 						<p>Приглашаем к сотрудничеству дилеров!</p>
 						<address>
@@ -113,7 +142,7 @@
 						</address>
 					</div>
 					<div class="address-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.762473087486!2d30.309979649714336!3d59.937275742389886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1701317990021!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Точка на карте"></iframe>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.762473087486!2d30.309979649714336!3d59.937275742389886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1701317990021!5m2!1sru!2sru" width="320" height="362" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Точка на карте"></iframe>
 					</div>
 				</section>
 				
@@ -157,9 +186,9 @@
 							<path d="M13.6426 0.515754L13.5 0.5L0 1.90733V26.5129L13.5 34.5L27 26.5129V1.90733L13.6426 0.515754ZM25.2344 25.5151L13.5 32.4573L1.76561 25.5151V15.4293L13.4507 22.3451L13.4701 23.5984L5.45351 18.8548L5.44295 20.0801L13.4894 24.8885L13.5088 26.175L5.46408 21.4174L5.45351 22.6427L13.5 27.4511L21.6239 22.6182V21.3929V17.409L25.2432 15.2595L25.2344 25.5151ZM25.2344 13.9519L22.0147 15.8319L20.5325 16.7071L13.4666 12.5201L13.456 13.7454L19.4957 17.318L19.4429 17.3495L19.3126 17.4247L18.4536 17.9166L13.4666 14.9689L13.456 16.1942L17.3921 18.5222L16.4591 19.1314L16.438 19.1436L13.4666 17.402L13.456 18.6273L15.4029 19.7615L13.4155 20.9483L1.7973 14.0762L13.4349 7.11831L25.2344 13.9519ZM25.2344 12.7266L13.4401 5.81075L1.76561 12.7196V3.4897L13.5 2.26442L25.2344 3.4897V12.7266Z" fill="#666666"/>
 						</g>
 						<defs>
-							<clipPath id="clip0_99067_120">
+							<clippath>
 								<rect width="27" height="34" fill="white" transform="translate(0 0.5)"/>
-							</clipPath>
+							</clippath>
 						</defs>
 					</svg>
 				</a>
