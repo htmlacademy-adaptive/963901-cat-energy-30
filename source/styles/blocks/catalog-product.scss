@@ -1,0 +1,26 @@
+.catalog-product h1 {
+	font-family: $oswaid-font;
+	color: #000000;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.catalog-product__link {
+	text-decoration: none;	
+}
+
+.catalog-product__link h3 {
+	font-family: $oswaid-font;
+	color: #000000;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+
+.catalog-product__item dl {
+	font-family: $lato-font;
+	color: #444444;
+	font-size: 12px;
+	line-height: 16px;
+}
+

@@ -1,16 +1,11 @@
+@charset "UTF-8";
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-	font-family: $lato-font;
-	font-size: 16px;
-	line-height: 24px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -18,4 +13,4 @@ body {
 	stroke:inherit;
 	stroke-width:inherit;
 	fill:inherit;
-}*/
+}*//*# sourceMappingURL=global.css.map */

@@ -1,0 +1,23 @@
+.promo h1 {
+	font-family: $oswaid-font;
+	text-align: center;
+	color: #ffffff;
+	font-size: 36px;
+	line-height: 36px;
+}
+
+.promo p {
+	font-family: $oswaid-font;
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+
+.promo__title{
+	background-image: url(../../images/index-background-desktop-mobile@1x.webp);
+	background-repeat: no-repeat;
+	background-color: rgba(104, 183, 56, 0.85);
+
+}

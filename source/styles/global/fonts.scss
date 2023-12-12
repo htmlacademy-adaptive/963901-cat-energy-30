@@ -1,1 +1,6 @@
 /* здесь подключите шрифты*/
+$oswaid-font: "oswaid";
+$lato-font: "lato";
+
+@include font-face("oswaid", 400, normal, url("../../fonts/oswaid-regular.woff2"));
+@include font-face("lato", 400, normal, url("../../fonts/lato-regular.woff2"));

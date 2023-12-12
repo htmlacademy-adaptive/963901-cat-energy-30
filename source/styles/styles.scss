@@ -1,7 +1,30 @@
 /* GLOBAL */
-@import "./global/variables.scss";
-@import "./global/global.scss";
-@import "./global/fonts.scss";
+@import "./global/variables";
+@import "./global/mixins";
+@import "./global/fonts";
+@import "./global/global";
+@import "./global/common";
+@import "./global/visually-hidden";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page";
+@import "./blocks/wrapper";
+
+@import "./blocks/header";
+@import "./blocks/main-navigation";
+
+@import "./blocks/main";
+@import "./blocks/button";
+@import "./blocks/promo";
+@import "./blocks/types-of-product";
+@import "./blocks/about-product";
+@import "./blocks/result";
+@import "./blocks/result-slider";
+@import "./blocks/catalog-product";
+@import "./blocks/address";
+@import "./blocks/address-title";
+@import "./blocks/address-map";
+
+@import "./blocks/footer";
+@import "./blocks/social-media";
+@import "./blocks/html-academy";
