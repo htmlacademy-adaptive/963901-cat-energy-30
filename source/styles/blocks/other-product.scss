@@ -1,0 +1,35 @@
+.other-product h2 {
+	font-family: $oswaid-font;
+	color: #000000;
+	font-size: 24px;
+	line-height: 24px;
+}
+
+// Заголовок на карточке товара
+.other-product__list h3 {
+	font-family: $oswaid-font;
+	color: #222222;
+	font-size: 24px;
+	line-height: 24px;
+}
+
+// описание товара
+.other-product__item dl {
+	font-family: $lato-font;
+	color: #444444;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.other-product__article {
+	background-image: url(../../images/cat-in-bag-mobile@1x.jpg);
+	background-repeat: no-repeat;
+	background-color: rgba(104, 183, 56, 0.85);
+}
+
+.other-product__article p {
+	font-family: $lato-font;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 20px;
+}
