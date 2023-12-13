@@ -2,9 +2,9 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -12,10 +12,3 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 }
-
-/*
-.svg path {
-	stroke:inherit;
-	stroke-width:inherit;
-	fill:inherit;
-}*/
