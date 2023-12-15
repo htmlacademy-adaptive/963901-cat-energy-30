@@ -1,13 +1,6 @@
 .main-navigation__list,
-.main-navigation__list,
-.types-of-product__list,
-.about-product__list,
-.catalog-product__list,
-.other-product__list,
-.pet-info__list,
-.choice-of-product__list,
-.owner-info__list,
-.additionally__list,
-.social-media {
-	list-style: none;
+.reset-list {
+  list-style: none;
+  text-decoration: none;
+  border: none;
 }

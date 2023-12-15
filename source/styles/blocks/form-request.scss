@@ -1,26 +1,28 @@
-.form-request h1 {
-	font-family: $oswaid-font;
-	color: #000000;
-	font-size: 36px;
-	line-height: 36px;
-}
+.form-request {
+  h1 {
+    font-family: $oswaid-font;
+    color: #000000;
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-.form-request p {
-	font-family: $oswaid-font;
-	color: #000000;
-	font-size: 14px;
-	line-height: 18px;
-	text-transform: uppercase;
+  p {
+    font-family: $oswaid-font;
+    color: #000000;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 }
 
 .form-request__form fieldset {
-	border: none;
+  border: none;
 }
 
-.form-request__form--required-fields {
-	font-family: $lato-font;
-	color: #000000;
-	font-size: 14px;
-	line-height: 16px;
-	text-align: center;
+.form-request__required-fields {
+  font-family: $lato-font;
+  color: #000000;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }
