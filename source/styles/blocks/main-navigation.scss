@@ -4,3 +4,20 @@
   line-height: 100%;
   text-transform: uppercase;
 }
+
+.main-navigation__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-navigation__toggle {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/icons/stack.svg#logo-open-mobile");
+  background-color: transparent;
+}

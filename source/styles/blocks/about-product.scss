@@ -5,9 +5,38 @@
   line-height: 40px;
 }
 
-.about-product__item p {
-  font-family: $lato-font;
-  color: #444444;
-  font-size: 14px;
-  line-height: 18px;
+.about-product__item {
+  position: relative;
+
+  p {
+    font-family: $lato-font;
+    color: #444444;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+  }
+
+  &:first-of-type::before {
+    background-image: url("../../images/icons/stack.svg#icon-leaf");
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../../images/icons/stack.svg#icon-food");
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../../images/icons/stack.svg#icon_eat");
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../../images/icons/stack.svg#icon-watch");
+  }
+
 }
