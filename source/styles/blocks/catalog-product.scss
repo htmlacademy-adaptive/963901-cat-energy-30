@@ -1,8 +1,10 @@
-.catalog-product h1 {
-  font-family: $oswaid-font;
-  color: #000000;
-  font-size: 36px;
-  line-height: 36px;
+.catalog-product {
+  h1 {
+    font-family: $oswaid-font;
+    color: $font-black;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .catalog-product__list {
@@ -18,7 +20,18 @@
 
   dl {
     font-family: $lato-font;
-    color: #444444;
+    color: $font-grey;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.catalog-product__item {
+  position: relative;
+
+  p {
+    font-family: $lato-font;
+    color: $font-grey;
     font-size: 12px;
     line-height: 16px;
   }
@@ -30,11 +43,12 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-}
 
-.catalog-product__item p {
-  font-family: $lato-font;
-  color: #444444;
-  font-size: 12px;
-  line-height: 16px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../images/icons/stack.svg#plus");
+  }
 }

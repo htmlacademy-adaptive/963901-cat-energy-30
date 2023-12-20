@@ -1,42 +1,53 @@
 .about-product h2 {
-	font-family: $oswaid-font;
-	color: #000000;
-	font-size: 36px;
-	line-height: 40px;
+  font-family: $oswaid-font;
+  color: $font-black;
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .about-product__item {
-	position: relative;
+  position: relative;
 
-	p {
-		font-family: $lato-font;
-		color: #444444;
-		font-size: 14px;
-		line-height: 18px;
-	}
+  p {
+    font-family: $lato-font;
+    color: $font-grey;
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-	&::before {
-		content: "";
-		position: absolute;
-		width: 30px;
-		height: 30px;
-		background-color: #68b738;
-	}
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+  }
 
-	&:first-of-type::before {
-		background-image: url("../../images/icons/stack.svg#icon-leaf");
-	}
+  &-leaf::before {
+    background-image: url("../../images/icons/stack.svg#icon-leaf");
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-	&:nth-child(2)::before {
-		background-image: url("../../images/icons/stack.svg#icon-food");
-	}
+  &-food::before {
+    background-image: url("../../images/icons/stack.svg#icon-food");
+    background-size: 26px 29px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-	&:nth-child(3)::before {
-		background-image: url("../../images/icons/stack.svg#icon_eat");
-	}
+  &-eat::before {
+    background-image: url("../../images/icons/stack.svg#icon_eat");
+    background-size: 25px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
-	&:nth-child(4)::before {
-		background-image: url("../../images/icons/stack.svg#icon-watch");
-	}
-
+  &-watch::before {
+    background-image: url("../../images/icons/stack.svg#icon-watch");
+    background-size: 26px 31px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

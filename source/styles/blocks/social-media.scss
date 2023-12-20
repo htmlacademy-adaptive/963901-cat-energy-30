@@ -1,0 +1,16 @@
+.social-media__link {
+  &:hover .social-media__link-svg {
+    opacity: 1;
+    fill: $basic-green;
+  }
+
+  &:focus .social-media__link-svg {
+    opacity: 1;
+    fill: $basic-green;
+  }
+
+  &:active .social-media__link-svg {
+    opacity: 0.3;
+  }
+}
+

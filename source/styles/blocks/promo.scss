@@ -2,7 +2,7 @@
   h1 {
     font-family: $oswaid-font;
     text-align: center;
-    color: #ffffff;
+    color: $font-white;
     font-size: 36px;
     line-height: 36px;
   }
@@ -10,7 +10,7 @@
   p {
     font-family: $oswaid-font;
     text-align: center;
-    color: #ffffff;
+    color: $font-white;
     font-size: 14px;
     line-height: 14px;
     text-transform: uppercase;

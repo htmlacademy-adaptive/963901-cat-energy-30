@@ -1,0 +1,91 @@
+/*---  Стили для декоративных элементов для линейки кормов (зеленый кружок с черной иконкой)  ---*/
+.decor-icons {
+  &-slim-line {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 7px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../../images/icons/stack.svg#cat-slim");
+    }
+  }
+
+  &-pro-line {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 7px;
+      left: -8px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../../images/icons/stack.svg#cat-pro");
+    }
+  }
+}
+
+/*---  Стили для описания корма (зеленый квадрат с белой иконкой)  ---*/
+.about-product__list .decor-icons {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-green;
+  }
+
+  &-leaf {
+    background-image: url("../../images/icons/stack.svg#icon-leaf");
+    background-size: 30px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-foof {
+    background-image: url("../../images/icons/stack.svg#icon-food");
+    background-size: 26px 29px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-eat {
+    background-image: url("../../images/icons/stack.svg#icon_eat");
+    background-size: 25px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-watch {
+    background-image: url("../../images/icons/stack.svg#icon-watch");
+    background-size: 26px 31px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

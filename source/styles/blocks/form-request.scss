@@ -1,14 +1,13 @@
 .form-request {
+  font-family: $oswaid-font;
+  color: $font-black;
+
   h1 {
-    font-family: $oswaid-font;
-    color: #000000;
     font-size: 36px;
     line-height: 36px;
   }
 
   p {
-    font-family: $oswaid-font;
-    color: #000000;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -21,7 +20,7 @@
 
 .form-request__required-fields {
   font-family: $lato-font;
-  color: #000000;
+  color: $font-black;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
