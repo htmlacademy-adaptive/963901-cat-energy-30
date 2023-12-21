@@ -43,19 +43,17 @@
     mask-image: url("/../images/icons/stack.svg#telegram");
 
     &:hover {
-        opacity: 1;
-        background-color: $basic-green;
-      }
+      opacity: 1;
+      background-color: $basic-green;
+    }
 
-      &:focus {
-        opacity: 1;
-        background-color: $basic-green;
-      }
+    &:focus {
+      opacity: 1;
+      background-color: $basic-green;
+    }
   }
 
   &:active {
     opacity: 0.3;
   }
 }
-
-

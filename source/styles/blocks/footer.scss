@@ -4,13 +4,17 @@
   height: 24px;
   background-color: #111111;
   mask-image: url("../../images/icons/stack.svg#logo-footer");
+
   &:hover {
     background-color: #3e3e3e;
   }
+
   &:focus {
     background-color: #3e3e3e;
   }
+
   &:active {
     background-color: #6b6b6b;
   }
 }
+
