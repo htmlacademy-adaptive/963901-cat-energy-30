@@ -3,3 +3,13 @@
   text-decoration: none;
   border: none;
 }
+
+.container {
+  padding: 13px 20px 14px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    padding: 25px 30px 25px 30px;
+  }
+}

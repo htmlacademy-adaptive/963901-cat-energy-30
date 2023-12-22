@@ -17,47 +17,49 @@
 
 <body class="page__body">
   <div class="wrapper">
-    <header class="header">
-      <nav class="main-navigation">
-        <a class="main-navigation__logo reset-list" href="index.html">
+    <div class="container">
+      <header class="header">
+        <nav class="main-navigation">
+          <a class="main-navigation__logo reset-list" href="index.html">
 
-          <!-- picture для логотипа-картинки -->
-          <picture>
-            <!-- Для web версии -->
-            <source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-web">
+            <!-- picture для логотипа-картинки -->
+            <picture class="main-navigation__logo--image">
+              <!-- Для web версии -->
+              <source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-web">
 
-            <!-- Для tablet версии -->
-            <source width="60" height="50" media="(min-width: 800px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-tablet">
+              <!-- Для tablet версии -->
+              <source width="60" height="50" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-tablet">
 
-            <!-- Для mobile версии -->
-            <img src="../../images/icons/stack.svg#logo-mobile" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-          </picture>
+              <!-- Для mobile версии -->
+              <img src="../../images/icons/stack.svg#logo-mobile" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+            </picture>
 
-          <!-- picture для логотипа-текста -->
-          <picture>
-            <!-- Для tablet и web версии -->
-            <source width="101" height="18" media="(min-width: 800px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-text-header-tablet">
+            <!-- picture для логотипа-текста -->
+            <picture>
+              <!-- Для tablet и web версии -->
+              <source width="101" height="18" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-text-header-tablet">
 
-            <!-- Для mobile версии -->
-            <img src="../../images/icons/stack.svg#logo-text-header-mobile" width="101" height="18" alt="Логотип - ссылка на главную страницу">
-          </picture>
-        </a>
-        <button class="main-navigation__toggle reset-list" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-navigation__list reset-list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__link reset-list" href="index.html">Главная</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link reset-list" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-navigation__item">
-            <a class="main-navigation__link reset-list" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+              <!-- Для mobile версии -->
+              <img src="../../images/icons/stack.svg#logo-text-header-mobile" width="101" height="18" alt="Логотип - ссылка на главную страницу">
+            </picture>
+          </a>
+          <button class="main-navigation__toggle reset-list" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-navigation__list reset-list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link main-navigation__link--active reset-list" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link reset-list" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link reset-list" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 
     <main class="main">
 
@@ -66,15 +68,15 @@
           <h1>Функциональное питание для котов</h1>
           <p>Занялся собой? Займись котом!</p>
         </div>
-        <picture>
+        <picture class="promo__image">
           <source width="709" height="609" type="image/png" media="(min-width: 1440px)"
             srcset="./images/index-can-web@1x.png 1x, ./images/index-can-web@2x.png 2x">
-          <source width="552" height="499" type="image/png" media="(min-width: 800px)"
+          <source width="552" height="499" type="image/png" media="(min-width: 700px)"
             srcset="./images/index-can-tablet@1x.png 1x, ./images/index-can-tablet@2x.png 2x">
           <img src="./images/index-can-mobile@1x.png" srcset="./images/index-can-mobile@2x.png 2x" width="280"
             height="270" alt="Банка корма">
         </picture>
-        <a class="buttons reset-list" href="form.html">Подобрать программу</a>
+        <a class="buttons promo__button reset-list" href="form.html">Подобрать программу</a>
       </section>
 
       <!-- Список с описание вариантов линеек кормов -->
