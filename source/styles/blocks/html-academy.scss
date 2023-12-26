@@ -1,4 +1,10 @@
 .html-academy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include reset-list;
+
   p {
     font-family: $oswaid-font;
     color: $font-grey;
@@ -20,5 +26,11 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .html-academy {
+    width: 170px;
   }
 }

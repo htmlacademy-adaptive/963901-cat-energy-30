@@ -1,8 +1,18 @@
-.result h2 {
-  font-family: $oswaid-font;
-  color: $font-black;
-  font-size: 36px;
-  line-height: 40px;
+.result {
+  background-color: #eaeaea;
+  @include container-modile;
+}
+  h2 {
+    font-family: $oswaid-font;
+    color: $font-black;
+    font-size: 36px;
+    line-height: 40px;
+    padding: 26px 0 40px 0;
+  }
+
+.result__content {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .result__description {
@@ -10,22 +20,46 @@
   color: $font-grey;
   font-size: 14px;
   line-height: 18px;
+  margin-bottom: 20px;
 }
 
-.result__list dt {
-  font-family: $lato-font;
-  color: $font-grey;
-  font-size: 12px;
-  line-height: 100%;
-  text-transform: lowercase;
+.result__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.result__list dd {
-  font-family: $oswaid-font;
-  color: $font-black;
-  font-size: 24px;
-  line-height: 24px;
-  text-transform: uppercase;
+.result__item {
+  display: flex;
+  flex-direction: column;
+  width: 125px;
+  align-items: center;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+
+  dt {
+    font-family: $lato-font;
+    color: $font-grey;
+    font-size: 12px;
+    line-height: 100%;
+    text-transform: lowercase;
+    position: relative;
+    top: 8px;
+    width: 80px;
+    text-align: center;
+    background-color: #eaeaea;
+  }
+
+  dd {
+    font-family: $oswaid-font;
+    color: $font-black;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    order: -1;
+    padding-top: 13px;
+  }
 }
 
 .result__expenses {
@@ -34,4 +68,70 @@
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  width: 190px;
+  margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+  .result {
+    background-color: transparent;
+    @include container-tablet;
+  }
+
+  h2 {
+    font-size: 60px;
+    line-height: 100%;
+    padding: 45px 0 60px 0;
+  }
+
+  .result__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .result__description {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 55px;
+  }
+
+  .result__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 47px;
+  }
+
+  .result__item {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+    align-items: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+
+  dt {
+    font-size: 14px;
+    line-height: 100%;
+    position: relative;
+    top: 8px;
+    width: 80px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  dd {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 13px;
+  }
+}
+
+  .result__expenses {
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: 175px;
+  }
+}
+
+

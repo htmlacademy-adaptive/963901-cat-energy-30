@@ -1,15 +1,6 @@
-.reset-list {
-  list-style: none;
-  text-decoration: none;
-  border: none;
-}
+/*$container-modile: padding-container(0, 20px, 0, 20px);
+$container-tablet: padding-container(0, 33.5px, 0, 30px);
+$container-desktop: padding-container(0, 110px, 0, 110px);
 
-.container {
-  padding: 13px 20px 14px 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .container {
-    padding: 25px 30px 25px 30px;
-  }
-}
+@include padding-container(0, 20px, 0, 20px);
+*/

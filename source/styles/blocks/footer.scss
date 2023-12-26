@@ -1,5 +1,14 @@
+.footer {
+  background-color: $background-color-ligth-grey;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 41px;
+  @include container-modile;
+}
+
 .footer__logo {
-  display: block;
   width: 128px;
   height: 24px;
   background-color: #111111;
@@ -18,3 +27,38 @@
   }
 }
 
+.footer__decor-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 43px;
+    background-color: #d9d9d9;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    @include container-tablet;
+     padding: 61.5px 0;
+  }
+
+ .footer-container {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0;
+
+  &::after {
+      background-color: transparent;
+    }
+
+  &::before {
+    background-color: transparent;
+  }
+ }
+}
+
+@media (min-width: $desktop-width) {}
