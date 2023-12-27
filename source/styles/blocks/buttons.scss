@@ -1,8 +1,21 @@
 .buttons {
-  background-color: #68b738;
+  background-color: $basic-green;
   font-family: $oswaid-font;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $basic-green-hover;
+  }
+
+  &:focus {
+    background-color: $basic-green-hover;
+  }
+
+  &:active {
+    background-color: $basic-green-hover;
+    color: rgba($font-white, $alpha: 0.3);
+  }
 }

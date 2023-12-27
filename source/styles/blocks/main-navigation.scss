@@ -1,6 +1,79 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-navigation__logo {
+  display: flex;
+  align-items: center;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.main-navigation__logo--image {
+  margin-right: 56px;
+}
+
+.main-navigation__list {
+  display: none;
+}
+
+
 .main-navigation__link {
   font-family: $oswaid-font;
-  color: #000000;
+  color: $font-black;
   line-height: 100%;
   text-transform: uppercase;
+}
+
+.main-navigation__toggle {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/icons/stack.svg#logo-open-mobile");
+  background-color: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .main-navigation__list {
+    max-width: 450px;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 33px;
+  }
+
+  .main-navigation__link {
+    &:hover {
+        opacity: 0.6;
+      }
+  }
+
+//Зеленая полоска под пунктом меню
+  .main-navigation__link--active {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 30px;
+      z-index: 2;
+      background-color: $basic-green;
+    }
+  }
+
+  .main-navigation__logo--image {
+    margin-right: 13px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
+  }
 }

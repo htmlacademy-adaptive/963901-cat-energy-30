@@ -1,8 +1,9 @@
 .types-of-product__item {
-  background-color: #f2f2f2;
+  position: relative;
+  background-color: $background-color-ligth-grey;
 
   h3 {
-    color: #000000;
+    color: $font-black;
     font-family: $oswaid-font;
     font-size: 24px;
     line-height: 37px;
@@ -10,17 +11,91 @@
   }
 
   p {
-    color: #444444;
+    color: $font-grey;
     font-family: $lato-font;
     font-size: 14px;
     line-height: 18px;
   }
-
+  /*---  Стили для ссылки  ---*/
   a {
-    color: #000000;
+    color: $font-black;
     font-family: $oswaid-font;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 32px;
+      height: 10px;
+      background-image: url("../../images/icons/stack.svg#icon_arrow");
+    }
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 32px;
+      height: 10px;
+      background-image: url("../../images/icons/stack.svg#icon_arrow-hover");
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  /*---   Стили для иконок (зеленый кружок с черной иконкой)   ---*/
+  &-slim-line {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 7px;
+      width: 36px;
+      height: 50px;
+      background-image: url("../../images/icons/stack.svg#cat-slim");
+    }
+  }
+
+  &-pro-line {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 7px;
+      left: -8px;
+      width: 67px;
+      height: 28px;
+      background-image: url("../../images/icons/stack.svg#cat-pro");
+    }
   }
 }
