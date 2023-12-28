@@ -17,49 +17,48 @@
 
 <body class="page__body">
   <div class="wrapper">
-    <div class="container">
-      <header class="header">
-        <nav class="main-navigation">
-          <a class="main-navigation__logo reset-list" href="index.html">
+    <header class="header">
+      <nav class="main-navigation">
+        <a class="main-navigation__logo" href="index.html">
 
-            <!-- picture для логотипа-картинки -->
-            <picture class="main-navigation__logo--image">
-              <!-- Для web версии -->
-              <source width="70" height="59" media="(min-width: 1440px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-web">
+          <!-- picture для логотипа-картинки -->
+          <picture class="main-navigation__logo--image">
+            <!-- Для web версии -->
+            <source width="70" height="59" media="(min-width: 1110px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-web">
 
-              <!-- Для tablet версии -->
-              <source width="60" height="50" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-tablet">
+            <!-- Для tablet версии -->
+            <source width="60" height="50" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-tablet">
 
-              <!-- Для mobile версии -->
-              <img src="../../images/icons/stack.svg#logo-mobile" width="33" height="38" alt="Логотип - ссылка на главную страницу">
-            </picture>
+            <!-- Для mobile версии -->
+            <img src="../../images/icons/stack.svg#logo-mobile" width="33" height="38" alt="Логотип - ссылка на главную страницу">
+          </picture>
 
-            <!-- picture для логотипа-текста -->
-            <picture>
-              <!-- Для tablet и web версии -->
-              <source width="101" height="18" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-text-header-tablet">
+          <!-- picture для логотипа-текста -->
+          <picture>
+            <!-- Для tablet и web версии -->
+            <source width="118" height="21" media="(min-width: 1100px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-text-header-tablet">
+            <source width="101" height="18" media="(min-width: 700px)" type="image/svg+xml" srcset="../../images/icons/stack.svg#logo-text-header-tablet">
 
-              <!-- Для mobile версии -->
-              <img src="../../images/icons/stack.svg#logo-text-header-mobile" width="101" height="18" alt="Логотип - ссылка на главную страницу">
-            </picture>
-          </a>
-          <button class="main-navigation__toggle reset-list" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-navigation__list reset-list">
-            <li class="main-navigation__item">
-              <a class="main-navigation__link main-navigation__link--active reset-list" href="index.html">Главная</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link reset-list" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="main-navigation__item">
-              <a class="main-navigation__link reset-list" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+            <!-- Для mobile версии -->
+            <img src="../../images/icons/stack.svg#logo-text-header-mobile" width="101" height="18" alt="Логотип - ссылка на главную страницу">
+          </picture>
+        </a>
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a class="main-navigation__link main-navigation__link--active" href="index.html">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="main">
 
@@ -67,16 +66,16 @@
         <div class="promo__title">
           <h1>Функциональное питание для котов</h1>
           <p>Занялся собой? Займись котом!</p>
+          <a class="buttons promo__button" href="form.html">Подобрать программу</a>
         </div>
         <picture class="promo__image">
-          <source width="709" height="609" type="image/png" media="(min-width: 1440px)"
+          <source width="552" height="499" type="image/png" media="(min-width: 1100px)"
             srcset="./images/index-can-web@1x.png 1x, ./images/index-can-web@2x.png 2x">
-          <source width="552" height="499" type="image/png" media="(min-width: 700px)"
+          <source width="709" height="609" type="image/png" media="(min-width: 700px)"
             srcset="./images/index-can-tablet@1x.png 1x, ./images/index-can-tablet@2x.png 2x">
           <img src="./images/index-can-mobile@1x.png" srcset="./images/index-can-mobile@2x.png 2x" width="280"
             height="270" alt="Банка корма">
         </picture>
-        <a class="buttons promo__button reset-list" href="form.html">Подобрать программу</a>
       </section>
 
       <!-- Список с описание вариантов линеек кормов -->
@@ -86,13 +85,13 @@
             <h3>Похудение</h3>
             <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="reset-list" href="catalog.html">Каталог slim</a>
+            <a href="catalog.html">Каталог slim</a>
           </li>
           <li class="types-of-product__item types-of-product__item-pro-line">
             <h3>Набор массы</h3>
             <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему
               коту нарастить необходимые мышцы!</p>
-            <a class="reset-list" href="catalog.html">Каталог pro</a>
+            <a href="catalog.html">Каталог pro</a>
           </li>
         </ul>
       </section>
@@ -100,7 +99,7 @@
       <!-- Описание принципорв работы корма -->
       <section class="about-product">
         <h2>Как это работает</h2>
-        <ol class="about-product__list reset-list">
+        <ol class="about-product__list">
           <li class="about-product__item about-product__item-leaf">
             <p>Функциональное питание содержит только полезные питательные вещества.</p>
           </li>
@@ -119,16 +118,22 @@
       <!-- Описание примера работы корма -->
       <section class="result">
         <h2>Живой пример</h2>
-        <p class="result__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-          по-прежнему спит по 16 часов в день.</p>
-        <dl class="result__list">
-          <dt>Снижение веса</dt>
-          <dd>5 кг</dd>
-          <dt>Затрачено времени</dt>
-          <dd>60 дней</dd>
-        </dl>
-        <p class="result__expenses">Затраты на питание: 15 000 РУБ.</p>
+        <div class="result__content">
+          <p class="result__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+            Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+            по-прежнему спит по 16 часов в день.</p>
+          <div class="result__list">
+            <dl class="result__item">
+              <dt>Снижение веса</dt>
+              <dd>5 кг</dd>
+            </dl>
+            <dl class="result__item">
+              <dt>Затрачено времени</dt>
+              <dd>60 дней</dd>
+            </dl>
+            <p class="result__expenses">Затраты на питание: 15 000 РУБ.</p>
+          </div>
+        </div>
 
         <div class="result-slider">
           <!-- Состояние слайдера before -->
@@ -157,32 +162,32 @@
           </address>
         </div>
         <div class="address-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7994.762473087486!2d30.309979649714336!3d59.937275742389886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1701317990021!5m2!1sru!2sru"
-            width="320" height="362" loading="lazy" title="Точка на карте"></iframe>
+		<iframe
+			src="https://yandex.ru/map-widget/v1/?um=constructor%3A7f10bc86ac305a1649f1aae136eee74d3b20e6a6c37d70f0af84cc7327e27552&amp;source=constructor"
+			width="500" height="400" frameborder="0"></iframe>
         </div>
       </section>
 
     </main>
 
     <footer class="footer">
-      <a class="footer__logo reset-list" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип"></a>
+      <a class="footer__logo footer__decor-line" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип"></a>
 
       <!-- Ссылки на социальные страницы -->
       <ul class="social-media">
         <li class="social-media__item">
-          <a class="social-media__link social-media__link-vk reset-list" href="https://vk.com/htmlacademy" aria-label="В контакте"></a>
+          <a class="social-media__link social-media__link-vk" href="https://vk.com/htmlacademy" aria-label="В контакте"></a>
         </li>
         <li class="social-media__item">
-          <a class="social-media__link social-media__link-youtube reset-list" href="https://www.youtube.com/user/htmlacademyru" aria-label="Youtube"></a>
+          <a class="social-media__link social-media__link-youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Youtube"></a>
         </li>
         <li class="social-media__item">
-          <a class="social-media__link social-media__link-telegramm reset-list" href="https://t.me/htmlacademy" aria-label="Telegramm"></a>
+          <a class="social-media__link social-media__link-telegramm" href="https://t.me/htmlacademy" aria-label="Telegramm"></a>
         </li>
       </ul>
 
       <!-- Комбинированная ссылка из наименования и логотипа -->
-      <a class="html-academy reset-list" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy">
+      <a class="html-academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Html Academy">
         <p>HTML Academy</p>
         <svg class="html-academy__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="35" viewBox="0 0 27 35" fill="none">
           <g clip-path="url(#clip0_99067_120)">

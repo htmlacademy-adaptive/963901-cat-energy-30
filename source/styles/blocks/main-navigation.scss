@@ -4,9 +4,12 @@
   align-items: center;
 }
 
+/*---  Логотип составной: картинка + текст. Все формата svg  ---*/
 .main-navigation__logo {
   display: flex;
   align-items: center;
+  @include reset-list;
+
   &:hover {
     opacity: 0.8;
   }
@@ -16,45 +19,55 @@
   }
 }
 
+/*---  Первая часть логотипа - картинка  ---*/
 .main-navigation__logo--image {
   margin-right: 56px;
 }
 
+/*---  Пункты меню (для мобильной версии они скрыты по умолчанию)  ---*/
 .main-navigation__list {
   display: none;
+  @include reset-list;
 }
-
 
 .main-navigation__link {
   font-family: $oswaid-font;
   color: $font-black;
+  font-size: 20px;
   line-height: 100%;
   text-transform: uppercase;
+  @include reset-list;
 }
 
+/*---  Кнопка для открытия меню (для мобильной версии)  ---*/
 .main-navigation__toggle {
   width: 24px;
   height: 24px;
   background-image: url("../../images/icons/stack.svg#logo-open-mobile");
   background-color: transparent;
+  position: relative;
+  top: -3px;
+  @include reset-list;
 }
 
 @media (min-width: $tablet-width) {
   .main-navigation__list {
-    max-width: 450px;
+    max-width: 480px;
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
-    gap: 33px;
+    gap: 33.5px;
   }
 
   .main-navigation__link {
+    font-size: 18px;
+    line-height: 24px;
     &:hover {
         opacity: 0.6;
       }
   }
 
-//Зеленая полоска под пунктом меню
+  /*---  Зеленая полоска под пунктом меню  --*/
   .main-navigation__link--active {
     position: relative;
 
@@ -63,17 +76,45 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      top: 30px;
+      top: 32px;
       z-index: 2;
       background-color: $basic-green;
     }
   }
 
+  /*---  Первая часть логотипа - картинка  ---*/
   .main-navigation__logo--image {
     margin-right: 13px;
   }
 
   .main-navigation__toggle {
     display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-navigation__list {
+    gap: 53px;
+  }
+
+  .main-navigation__link {
+    font-size: 18px;
+    line-height: normal;
+    color: $font-black;
+    //color: $font-white;
+  }
+
+  .main-navigation__link--active {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 33px;
+      z-index: 2;
+      background-color: $font-white;
+    }
   }
 }

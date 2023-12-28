@@ -1,5 +1,6 @@
 .fieldsets {
   font-family: $oswaid-font;
+  border: none;
 
   legend {
     color: $font-black;
@@ -16,7 +17,7 @@
   }
 
   input {
-    padding: 14px 0 13px 15px;
+    padding: 17px 0 11px 15px;
   }
 
   input::placeholder {
@@ -37,3 +38,31 @@
     padding: 14px 0;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .fieldsets {
+
+    legend {
+      font-size: 36px;
+      line-height: 100%;
+    }
+
+    label {
+      font-size: 20px;
+      line-height: normal;
+    }
+
+    input {
+      padding: 18px 0 10px 20px;
+    }
+
+    input::placeholder {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {}
+
+

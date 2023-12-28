@@ -4,7 +4,10 @@
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
+  padding: 10px 0 10px 0;
+  @include reset-list;
 
   &:hover {
     background-color: $basic-green-hover;
@@ -17,5 +20,11 @@
   &:active {
     background-color: $basic-green-hover;
     color: rgba($font-white, $alpha: 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .buttons {
+    padding: 14px 0 14px 0;
   }
 }
