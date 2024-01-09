@@ -20,9 +20,10 @@
 @import "./blocks/result-slider";
 @import "./blocks/catalog-product";
 @import "./blocks/other-product";
-@import "./blocks/form-request";
+@import "./blocks/form-request";   //тут же определены новые чекбоксы и радиокнопки
 // блоки для описания формы заявки подбора программы
 @import "./blocks/fieldsets"; // блок для описания labels и inputs
+@import "./blocks/fieldsets-radio-checkbox"; // блок для описания собственных радиокнопок и чекбоксов
 @import "./blocks/container-pet-info-choice-of-product";
 @import "./blocks/pet-info";
 @import "./blocks/choice-of-product";
@@ -30,7 +31,7 @@
 @import "./blocks/comment";
 @import "./blocks/additionally";
 @import "./blocks/address";
-@import "./blocks/address-title";
+//@import "./blocks/address-title";
 @import "./blocks/address-map";
 @import "./blocks/footer";
 @import "./blocks/social-media";

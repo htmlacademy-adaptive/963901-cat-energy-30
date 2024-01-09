@@ -1,6 +1,5 @@
 .choice-of-product {
   position: relative;
-  margin-bottom: 47px;
 
   /*---  Серая полоска до и после блока  ---*/
   &::before {
@@ -22,13 +21,18 @@
   }
 }
 
+.choice-of-product__list {
+  @include reset-list;
+  @include padding-container(mobile);
+}
+
 .choice-of-product__item + .choice-of-product__item {
   padding-top: 19px;
 }
 
 @media (min-width: $tablet-width) {
   .choice-of-product {
-    margin-bottom: 51px;
+    @include padding-for-two-form;
 
     &::after {
       background-color: transparent;
@@ -40,16 +44,21 @@
   }
 
   .choice-of-product__fielset {
-    padding: 28px 0 32px 51px;
+    padding: 28px 0 32px 27px;
     border: 1px solid #e7e7e7;
   }
 
+  .choice-of-product__list {
+    padding: 0;
+  }
+
   .choice-of-product__item+.choice-of-product__item {
-    padding-top: 23px;
+    padding-top: 22px;
   }
 }
+
 @media (min-width: $desktop-width) {
-  .choice-of-product .container {
-    padding: 0 110px 0 0;
+  .choice-of-product {
+    padding: 0;
   }
 }

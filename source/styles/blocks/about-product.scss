@@ -1,6 +1,5 @@
 .about-product {
   margin-bottom: 52px;
-  @include container-modile;
 
   h2 {
     font-family: $oswaid-font;
@@ -16,24 +15,27 @@
 .about-product__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 24px;
   @include reset-list;
 }
 
 .about-product__item {
+  display: flex;
+  gap: 20px;
   position: relative;
-  max-width: 330px;
+  align-items: center;
 
   p {
-    padding-top: 2px;
     font-family: $lato-font;
     color: $font-grey;
     font-size: 14px;
     line-height: 18px;
-    margin-left: 80px;
+    padding-top: 3px;
+    padding-left: 90px;
+    min-height: 60px;
   }
 
+  /*---  Зеленый квадрат  ---*/
   &::before {
     content: "";
     position: absolute;
@@ -41,29 +43,28 @@
     height: 60px;
     background-color: $basic-green;
   }
-
-  &-leaf::before {
+  &--leaf::before {
     background-image: url("../../images/icons/stack.svg#icon-leaf");
     background-size: 32px 30px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &-food::before {
+  &--food::before {
     background-image: url("../../images/icons/stack.svg#icon-food");
     background-size: 26px 29px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &-eat::before {
+  &--eat::before {
     background-image: url("../../images/icons/stack.svg#icon_eat");
     background-size: 25px 30px;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  &-watch::before {
+  &--watch::before {
     background-image: url("../../images/icons/stack.svg#icon-watch");
     background-size: 26px 31px;
     background-repeat: no-repeat;
@@ -75,7 +76,6 @@
   .about-product {
     margin-bottom: 149px;
     position: relative;
-    @include container-tablet;
 
     h2 {
       font-size: 60px;
@@ -138,7 +138,6 @@
 
 @media (min-width: $desktop-width) {
   .about-product {
-    @include container-desktop;
 
     &::before {
       background-color: transparent;

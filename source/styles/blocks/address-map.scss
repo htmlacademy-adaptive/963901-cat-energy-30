@@ -1,0 +1,15 @@
+.address-map {
+  iframe {
+    border: none;
+    outline: none;
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+.address-map {
+    iframe {
+      height: 400px;
+    }
+  }
+}

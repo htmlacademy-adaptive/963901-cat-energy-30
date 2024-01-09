@@ -20,14 +20,31 @@
 }
 
 /*---  Первая часть логотипа - картинка  ---*/
-.main-navigation__logo--image {
+.main-navigation__logo-image {
   margin-right: 56px;
 }
 
 /*---  Пункты меню (для мобильной версии они скрыты по умолчанию)  ---*/
 .main-navigation__list {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  top: 50px;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
   @include reset-list;
+}
+
+.main-navigation__list--none {
+  display: none;
+}
+
+.main-navigation__item {
+  padding: 23px 0;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center;
 }
 
 .main-navigation__link {
@@ -54,9 +71,19 @@
   .main-navigation__list {
     max-width: 480px;
     display: flex;
+    flex-direction: row;
     justify-content: end;
     flex-wrap: wrap;
+    background-color: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
     gap: 33.5px;
+  }
+
+  .main-navigation__item {
+    padding: 0;
+    border: none;
   }
 
   .main-navigation__link {
@@ -76,14 +103,14 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      top: 32px;
+      top: 30px;
       z-index: 2;
       background-color: $basic-green;
     }
   }
 
   /*---  Первая часть логотипа - картинка  ---*/
-  .main-navigation__logo--image {
+  .main-navigation__logo-image {
     margin-right: 13px;
   }
 
@@ -94,7 +121,7 @@
 
 @media (min-width: $desktop-width) {
   .main-navigation__list {
-    gap: 53px;
+    gap: 55px;
   }
 
   .main-navigation__link {
@@ -106,6 +133,25 @@
 
   .main-navigation__link--active {
     position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 33px;
+      z-index: 2;
+      background-color: $basic-green;
+    }
+  }
+
+  /*---  Стили для белой навигации  ---*/
+  .main-navigation__link--desktop {
+    color: $font-white;
+  }
+
+  .main-navigation__link--desktop-active {
+  position: relative;
 
     &::before {
       content: "";
