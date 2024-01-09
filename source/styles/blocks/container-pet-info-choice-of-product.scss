@@ -1,0 +1,22 @@
+.container-pet-info-choice-of-product {
+  margin-bottom: 47px;
+}
+
+@media (min-width: $tablet-width) {
+.container-pet-info-choice-of-product {
+    margin-bottom: 65px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container-pet-info-choice-of-product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 81px;
+    padding: 0;
+    margin-bottom: 68px;
+    @include padding-container($desktop-width);
+  }
+}
+
+

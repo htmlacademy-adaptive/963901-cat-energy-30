@@ -1,0 +1,45 @@
+.pet-info {
+  margin-bottom: 50px;
+  @include padding-container(mobile);
+}
+
+.pet-info__item + .pet-info__item {
+  padding-top: 14px;
+}
+
+.pet-info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+
+  input {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pet-info {
+    margin-bottom: 71px;
+    @include padding-for-two-form;
+  }
+
+  .pet-info__item + .pet-info__item {
+    padding-top: 20px;
+  }
+}
+
+
+
+@media (min-width: $desktop-width) {
+  .pet-info {
+    margin: 0;
+    width: 570px;
+    padding: 0;
+  }
+
+  .pet-info__item+.pet-info__item {
+    padding-top: 20px;
+  }
+}
+

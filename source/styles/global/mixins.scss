@@ -7,3 +7,60 @@
     src: $font-src format("woff2");
   }
 }
+
+@mixin padding-container-form {
+  padding-left: 40px;
+  padding-right: 39px;
+}
+
+@mixin padding-for-two-form {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+@mixin padding-container($viewport: mobile) {
+  @if $viewport == $desktop-width {
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+  @else if $viewport == $tablet-width {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  @else {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+
+
+/*
+@mixin padding-container($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+
+@mixin container-modile {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@mixin container-tablet {
+  padding-right: 33.5px;
+  padding-left: 30px;
+}
+
+@mixin container-desktop {
+  padding-right: 110px;
+  padding-left: 110px;
+}
+*/
+@mixin reset-list {
+  list-style: none;
+  text-decoration: none;
+  border: none;
+}

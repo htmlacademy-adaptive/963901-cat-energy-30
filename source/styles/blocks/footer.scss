@@ -1,7 +1,20 @@
+.footer {
+  background-color: $background-color-ligth-grey;
+}
+
+/*---  Поизионирование конетнта footer  ---*/
+.footer__content {
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 39px;
+  @include padding-container(mobile);
+}
+
 .footer__logo {
-  display: block;
-  width: 128px;
-  height: 24px;
+  width: 130px;
+  height: 26px;
   background-color: #111111;
   mask-image: url("../../images/icons/stack.svg#logo-footer");
 
@@ -18,3 +31,15 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+
+.footer__content {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0;
+  padding-top: 55px;
+  @include padding-container($tablet-width);
+  }
+}
+
+@media (min-width: $desktop-width) {}

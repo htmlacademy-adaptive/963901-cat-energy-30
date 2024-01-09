@@ -1,24 +1,53 @@
 .catalog-product {
+  margin-bottom: 36px;
+  position: relative;
+
+  /*---   Серая полоска под заголовком (только для мобильной версии)   ---*/
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 105px;
+    background-color: #d9d9d9;
+  }
+
   h1 {
     font-family: $oswaid-font;
     color: $font-black;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 42px;
+    padding-top: 29px;
+    @include padding-container(mobile);
   }
 }
 
 .catalog-product__list {
-  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include reset-list;
+}
 
+.catalog-product__item {
+  width: 320px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ebebeb;
+
+  /*---   Стили для текста   ---*/
   h3 {
     font-family: $oswaid-font;
     color: #222222;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    width: 80px;
   }
 
-  dl {
+  td {
     font-family: $lato-font;
     color: $font-grey;
     font-size: 12px;
@@ -26,29 +55,308 @@
   }
 }
 
-.catalog-product__item {
+.catalog-product__item-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.catalog-product__item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.catalog-product__link {
+  @include reset-list;
+}
+
+/*---   Кнопка "Заказать"   ---*/
+.catalog-product__link-button {
+  display: block;
+}
+
+/*---   Ссылка - картинка   ---*/
+.catalog-product__link--image {
+  order: -1;
+  text-align: center;
+}
+
+/*---  Карточка "Показать больше"  ---*/
+.catalog-product__item--show-more {
+  text-align: center;
   position: relative;
+  padding-top: 78px;
+
+  &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 145px;
+      top: 25px;
+      background-image: url("../../images/icons/stack.svg#plus");
+    }
 
   p {
     font-family: $lato-font;
     color: $font-grey;
     font-size: 12px;
     line-height: 16px;
+    margin-bottom: 21px;
   }
 }
 
-.catalog-product__title {
+.catalog-product__link--show-more {
+  @include reset-list;
   font-family: $oswaid-font;
-  color: #111111;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 125%;
   text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 8px;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url("../../images/icons/stack.svg#plus");
+.catalog-product__show-more{
+  font-family: $oswaid-font;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $font-grey;
+  background-color: #f2f2f2;
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-product {
+    margin-bottom: 69px;
+
+    /*---   Серая полоска под заголовком (только для мобильной версии)   ---*/
+    &::after {
+      background-color: transparent;
+    }
+
+    h1 {
+      font-size: 60px;
+      line-height: 100%;
+      margin-bottom: 80px;
+      padding: 0;
+      padding-top: 27px;
+    }
   }
+
+  .catalog-product__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px;
+    justify-content: space-between;
+    @include reset-list;
+  }
+
+  .catalog-product__item {
+    width: 324px;
+    border-bottom: none;
+    padding: 162px 37px 40px 37px;
+    margin-top: 84px;
+    background-color: #f2f2f2;
+
+    /*---   Стили для текста   ---*/
+    h3 {
+      color: #222222;
+      font-size: 20px;
+      line-height: 120%;
+      width: 140px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    td {
+      font-size: 16px;
+      line-height: 125%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  .catalog-product__item-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+
+    position: relative;
+  }
+
+  .catalog-product__item-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 13px;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+
+  .catalog-product__link {
+    @include reset-list;
+  }
+
+  /*---   Кнопка "Заказать"   ---*/
+  .catalog-product__link--button {
+    display: block;
+  }
+
+  /*---   Ссылка - картинка   ---*/
+  .catalog-product__link--image {
+    position: absolute;
+    top: -214px;
+  }
+
+  .catalog-product__link--image-big {
+    position: absolute;
+    top: -230px;
+  }
+
+  /*---  Карточка "Показать больше"  ---*/
+  .catalog-product__item--show-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding-top: 160px;
+    background-color: transparent;
+    border: 2px solid #f2f2f2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      left: 130px;
+      top: 50px;
+      background-image: url("../../images/icons/stack.svg#plus-tablet");
+    }
+
+    p {
+      font-family: $lato-font;
+      color: $font-grey;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 83px;
+      width: 170px;
+    }
+  }
+
+  .catalog-product__link--show-more {
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 23px;
+    width: 170px;
+  }
+
+  .catalog-product__button--show-more {
+    font-family: $oswaid-font;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: $font-grey;
+    background-color: #f2f2f2;
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+	.catalog-product {
+		margin-bottom: 73px;
+
+		h1 {
+			margin-bottom: 80px;
+			padding-top: 13px;
+		}
+	}
+
+	.catalog-product__list {
+		gap: 60px;
+	}
+
+	.catalog-product__item {
+		width: 245px;
+		padding: 151px 37px 40px 37px;
+		margin-top: 84px;
+
+		/*---   Стили для текста   ---*/
+		h3 {
+			color: #222222;
+			font-size: 20px;
+			line-height: 120%;
+			width: 140px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		td {
+			font-size: 16px;
+			line-height: 125%;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+
+	.catalog-product__item-content {
+		margin-bottom: 33px;
+	}
+
+	.catalog-product__item-container {
+		gap: 21px;
+
+	}
+
+	/*---   Ссылка - картинка   ---*/
+	.catalog-product__link--image {
+		top: -203px;
+	}
+
+	.catalog-product__link--image-big {
+		top: -215px;
+	}
+
+	/*---  Карточка "Показать больше"  ---*/
+	.catalog-product__item--show-more {
+		padding-top: 150px;
+
+		&::before {
+			content: "";
+			left: 90px;
+			top: 49px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 18px;
+			margin-bottom: 92px;
+			width: 170px;
+		}
+	}
+
+	.catalog-product__button--show-more {
+		font-family: $oswaid-font;
+		font-size: 16px;
+		line-height: 125%;
+		text-transform: uppercase;
+		color: $font-grey;
+		background-color: #f2f2f2;
+		display: block;
+		width: 100%;
+	}
 }

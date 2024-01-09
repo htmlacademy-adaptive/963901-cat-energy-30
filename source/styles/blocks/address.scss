@@ -1,0 +1,58 @@
+.address__title {
+  @include padding-container(mobile);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  h2 {
+    font-family: $oswaid-font;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: #111111;
+    padding: 0;
+    width: 140px;
+  }
+  p {
+    font-family: $lato-font;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+    font-style: normal;
+    width: 140px;
+  }
+}
+
+.address__title--background {
+  background-color: #f2f2f2;
+}
+
+@media (min-width: $tablet-width) {
+  .address__title {
+    padding: 61px 70px;
+
+    h2 {
+      width: 170px;
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    p {
+      width: 160px;
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address {
+    position: relative;
+  }
+
+  .address__title {
+    position: absolute;
+    background-color: #ffffff;
+    top: 95px;
+    left: 110px;
+  }
+}

@@ -1,0 +1,131 @@
+fieldset {
+
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    border: 1px solid #e7e7e7;
+ }
+
+  /*---   Добавляем отступы к соседствующим меткам   ---*/
+  input[type="checkbox"]+label,
+  input[type="radio"]+label {
+    display: inline-block;
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+  }
+
+  /*---   Рисуем новые элементы перед label   ---*/
+  input[type="checkbox"]:checked+label::before,
+  input[type="checkbox"]:not(:checked)+label::before,
+  input[type="radio"]:checked+label::before,
+  input[type="radio"]:not(:checked)+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -7px;
+    width: 30px;
+    height: 30px;
+  }
+
+  input[type="checkbox"]:checked+label:before,
+  input[type="checkbox"]:not(:checked)+label:before {
+    border: 1px solid #cdcdcd;
+  }
+
+  input[type="radio"]:checked+label:before,
+  input[type="radio"]:not(:checked)+label:before {
+    border-radius: 100%;
+    border: 1px solid #cdcdcd;
+  }
+
+  input[type="checkbox"]:checked+label:after,
+  input[type="checkbox"]:not(:checked)+label:after,
+  input[type="radio"]:checked+label:after,
+  input[type="radio"]:not(:checked)+label:after {
+    content: "";
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+
+  /*---	Рисуем галочку и кружок   ---*/
+  input[type="checkbox"]:checked+label:after,
+  input[type="checkbox"]:not(:checked)+label:after {
+    left: 9px;
+    top: 3px;
+    width: 12px;
+    height: 9px;
+    border-left: 2px solid $basic-green;
+    border-bottom: 3px solid $basic-green;
+    transform: rotate(-45deg);
+  }
+
+  input[type="radio"]:checked+label:after,
+  input[type="radio"]:not(:checked)+label:after {
+    left: 8px;
+    top: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background-color: $basic-green;
+  }
+
+  /*---	Скрываем галочку и кружок при нажатии   ---*/
+  input[type="checkbox"]:not(:checked)+label:after,
+  input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+  }
+
+  input[type="checkbox"]:checked+label:after,
+  input[type="radio"]:checked+label:after {
+    opacity: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  fieldset {
+
+  /*---   Добавляем отступы к соседствующим меткам   ---*/
+    input[type="checkbox"]+label,
+    input[type="radio"]+label {
+      padding-left: 58px;
+    }
+
+    /*---   Рисуем новые элементы перед label   ---*/
+    input[type="checkbox"]:checked+label::before,
+    input[type="checkbox"]:not(:checked)+label::before,
+    input[type="radio"]:checked+label::before,
+    input[type="radio"]:not(:checked)+label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -5px;
+      width: 40px;
+      height: 40px;
+    }
+
+    /*---	Рисуем галочку и кружок   ---*/
+    input[type="checkbox"]:checked+label:after,
+    input[type="checkbox"]:not(:checked)+label:after {
+      left: 9px;
+      top: 4px;
+      width: 23px;
+      height: 11px;
+      border-left: 2px solid $basic-green;
+      border-bottom: 3px solid $basic-green;
+      transform: rotate(-45deg);
+    }
+
+    input[type="radio"]:checked+label:after,
+    input[type="radio"]:not(:checked)+label:after {
+      left: 11px;
+      top: 6px;
+      width: 17px;
+      height: 17px;
+      border-radius: 100%;
+      background-color: $basic-green;
+    }
+  }
+}

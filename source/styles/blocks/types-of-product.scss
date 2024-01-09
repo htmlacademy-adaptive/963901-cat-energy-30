@@ -1,13 +1,30 @@
+.types-of-product {
+  margin-bottom: 18px;
+}
+
+/*---  Список вариантов кормов  ---*/
+.types-of-product__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include reset-list;
+}
+
+/*---  Карточка линейки  ---*/
 .types-of-product__item {
   position: relative;
   background-color: $background-color-ligth-grey;
+  padding: 29px 20px 18px 20px;
 
   h3 {
     color: $font-black;
     font-family: $oswaid-font;
     font-size: 24px;
     line-height: 37px;
+    font-weight: 300;
     text-transform: uppercase;
+    padding-left: 70px;
+    margin-bottom: 29px;
   }
 
   p {
@@ -15,7 +32,21 @@
     font-family: $lato-font;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 40px;
+    position: relative;
+
+    /*---  После описания есть серая линия (только в мобильной версии)  ---*/
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: #d9d9d9;
+      bottom: -23px;
+      left: 0;
+    }
   }
+
   /*---  Стили для ссылки  ---*/
   a {
     color: $font-black;
@@ -24,16 +55,21 @@
     line-height: 16px;
     text-transform: uppercase;
     position: relative;
+    @include reset-list;
 
+    /*---  Вставка стелки после наименования  ---*/
     &::after {
       content: "";
       position: absolute;
       z-index: 1;
       width: 32px;
-      height: 10px;
+      height: 17px;
       background-image: url("../../images/icons/stack.svg#icon_arrow");
+      left: 102px;
+      top: 2px;
     }
 
+    /*---  При наведении ссылка увеличивается  ---*/
     &:hover::after {
       content: "";
       position: absolute;
@@ -53,8 +89,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 24px;
+      left: 20px;
       z-index: 1;
       width: 50px;
       height: 50px;
@@ -66,8 +102,8 @@
       content: "";
       position: absolute;
       z-index: 2;
-      top: 0;
-      left: 7px;
+      top: 22px;
+      left: 27px;
       width: 36px;
       height: 50px;
       background-image: url("../../images/icons/stack.svg#cat-slim");
@@ -78,8 +114,8 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 24px;
+      left: 20px;
       z-index: 1;
       width: 50px;
       height: 50px;
@@ -91,11 +127,207 @@
       content: "";
       position: absolute;
       z-index: 2;
-      top: 7px;
-      left: -8px;
+      top: 35px;
+      left: 13px;
       width: 67px;
       height: 28px;
       background-image: url("../../images/icons/stack.svg#cat-pro");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .types-of-product {
+    margin-bottom: 45px;
+  }
+
+  .types-of-product__list {
+    display: flex;
+	  flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .types-of-product__item {
+    position: relative;
+    background-color: $background-color-ligth-grey;
+    padding: 77px 316px 57px 53px;
+
+    h3 {
+      font-size: 36px;
+      line-height: 100%;
+      padding: 0;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    /*---  Убираем серую линию  ---*/
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 52px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        background-color: transparent;
+      }
+    }
+
+    /*---  Стили для ссылки  ---*/
+    a {
+      color: $font-black;
+      font-family: $oswaid-font;
+      font-size: 20px;
+      line-height: normal;
+      text-transform: uppercase;
+      position: relative;
+
+      /*---  Вставка стелки после наименования  ---*/
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 32px;
+        height: 17px;
+        background-image: url("../../images/icons/stack.svg#icon_arrow");
+        left: 132px;
+        top: 6px;
+      }
+    }
+
+  /*---   Стили для иконок (зеленый кружок с черной иконкой)   ---*/
+    &-slim-line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 92px;
+        left: 84%;
+        transform: translateX(-74%);
+        z-index: 1;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $basic-green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 82px;
+        left: 82.5%;
+        transform: translateX(-75%);
+        width: 140px;
+        height: 194px;
+        background-image: url("../../images/icons/stack.svg#cat-slim");
+      }
+    }
+
+    &-pro-line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 92px;
+        left: 84%;
+        transform: translateX(-74%);
+        z-index: 1;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $basic-green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 136px;
+        left: 88%;
+        transform: translateX(-76%);
+        width: 268px;
+        height: 112px;
+        background-image: url("../../images/icons/stack.svg#cat-pro");
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .types-of-product {
+    margin-bottom: 71px;
+  }
+
+  .types-of-product__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+  }
+
+  .types-of-product__item {
+    padding: 77px 61px 59px 52px;
+
+    h3 {
+      padding-left: 162px;
+      margin-bottom: 73px;
+    }
+
+    p {
+      margin-bottom: 27px;
+    }
+
+    /*---   Стили для иконок (зеленый кружок с черной иконкой)   ---*/
+    &-slim-line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 48px;
+        left: 126px;
+        z-index: 1;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $basic-green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 42px;
+        left: 120px;
+        transform: translateX(-75%);
+        width: 70px;
+        height: 97px;
+        background-image: url("../../images/icons/stack.svg#cat-slim");
+      }
+    }
+
+    &-pro-line {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 48px;
+        left: 126px;
+        transform: translateX(-75%);
+        z-index: 1;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: $basic-green;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 67px;
+        left: 135px;
+        transform: translateX(-75%);
+        width: 134px;
+        height: 56px;
+        background-image: url("../../images/icons/stack.svg#cat-pro");
+      }
     }
   }
 }

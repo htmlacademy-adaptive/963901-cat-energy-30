@@ -1,30 +1,112 @@
-.other-product h2 {
-  font-family: $oswaid-font;
-  color: #000000;
-  font-size: 24px;
-  line-height: 24px;
+.other-product {
+  position: relative;
+  margin-bottom: 35px;
+
+  /*---  Зеленая полоска  -- */
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 15px;
+    background-color: $basic-green;
+    z-index: -1;
+  }
+
+  h2 {
+    font-family: $oswaid-font;
+    color: $font-black;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 24px;
+    background-color: $font-white;
+    width: 280px;
+    padding: 0;
+    margin-bottom: 36px;
+    @include padding-container(mobile);
+  }
 }
 
-// Заголовок на карточке товара
-.other-product__list h3 {
-  font-family: $oswaid-font;
-  color: #222222;
-  font-size: 24px;
-  line-height: 24px;
-}
+/*---  Стили для текста спика  ---*/
+.other-product__list {
+  @include reset-list;
+  margin-bottom: 35px;
 
-// описание товара
-.other-product__item dl {
+  h3 {
+    font-family: $oswaid-font;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+
+  td {
   font-family: $lato-font;
   color: #444444;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 100%;
+  }
+}
+
+.other-product__item {
+  padding-top: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-of-type {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.other-product__item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 12px;
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.other-product__link {
+  display: block;
+  width: 100%;
 }
 
 .other-product__article {
-  background-image: url("./images/cat-in-bag-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-color: rgba(104, 183, 56, 0.85);
+  position: relative;
+
+  /*---  Картинка с котом  ---*/
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(104, 183, 56, 0.85);
+    background-image: url("../../images/cat-in-bag-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    height: 290px;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    z-index: -1;
+  }
+
+  /*---  Зеленый фон - перекрывает кота  ---*/
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 290px;
+    z-index: -1;
+    background-color: rgba(104, 183, 56, 0.85);
+  }
 }
 
 .other-product__article p {
@@ -32,4 +114,276 @@
   color: $font-white;
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
+  width: 165px;
+  margin: 0 auto;
+  padding: 187px 0 43px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../images/icons/stack.svg#icon_gift");
+    top: 60px;
+    left: 42px;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .other-product {
+    position: relative;
+    margin-bottom: 75px;
+
+    /*---  Зеленая полоска  -- */
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 20px;
+      background-color: $basic-green;
+      z-index: -1;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 100%;
+      width: 400px;
+      padding: 0 20px;
+      margin-bottom: 80px;
+      margin-left: 50px;
+    }
+  }
+
+  /*---  Стили для текста спиcка  ---*/
+  .other-product__list {
+    margin-bottom: 70px;
+    border: 1px solid #cdcdcd;
+
+    h3 {
+      font-size: 20px;
+    }
+
+    td {
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+
+  .other-product__item {
+    padding: 25px 38px 28px 38px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .other-product__item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  .other-product__item-first {
+    margin-right: 48px;
+  }
+
+  .other-product__article {
+    position: relative;
+
+    /*---  Картинка с котом  ---*/
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      background-image: url("../../images/cat-in-bag-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      background-position: center;
+      height: 200px;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      z-index: -1;
+    }
+
+    /*---  Зеленый фон - перекрывает кота  ---*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 200px;
+      z-index: -1;
+      background-color: rgba(104, 183, 56, 0.85);
+    }
+  }
+
+  .other-product__article p {
+    text-align: left;
+    width: 161px;
+    margin: 0 125px 0 421px;
+    padding: 71px 0 69px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../images/icons/stack.svg#icon_gift");
+      top: 60px;
+      left: -343px;
+      height: 80px;
+      width: 80px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .other-product {
+    position: relative;
+    margin-bottom: 75px;
+
+    /*---  Зеленая полоска  -- */
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 24px;
+      background-color: $basic-green;
+      z-index: -1;
+    }
+
+    h2 {
+      width: 400px;
+      padding: 0 20px;
+      margin-bottom: 80px;
+      margin-left: 90px;
+    }
+  }
+
+  .content-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /*---  Стили для текста спиcка  ---*/
+  .other-product__list {
+    margin-bottom: 70px;
+    border: 1px solid #cdcdcd;
+    border-left: none;
+    border-right: none;
+    width: 895px;
+  }
+
+  .other-product__item {
+    padding: 15px 0 17px 0;
+    border-bottom: 1px solid #cdcdcd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    h3 {
+      width: 200px;
+      margin-right: 113px;
+    }
+  }
+
+  .other-product__item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    tr {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .other-product__item-first {
+    margin-right: 44px;
+    text-align: left;
+    width: 200px;
+  }
+
+  .other-product__link {
+    width: 244px;
+  }
+
+  .other-product__article {
+    position: relative;
+    width: 245px;
+
+    /*---  Картинка с котом  ---*/
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      background-image: url("../../images/cat-in-bag-web@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+      background-position: center;
+      height: 288px;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      z-index: -1;
+    }
+
+    /*---  Зеленый фон - перекрывает кота  ---*/
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 288px;
+      z-index: -1;
+      background-color: rgba(104, 183, 56, 0.85);
+    }
+  }
+
+  .other-product__article p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 185px 0 43px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../../images/icons/stack.svg#icon_gift");
+      top: 60px;
+      left: 43px;
+      height: 80px;
+      width: 80px;
+    }
+  }
 }

@@ -1,0 +1,142 @@
+.owner-info {
+  margin-bottom: 24px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: -70px;
+    background-color: $basic-green;
+    z-index: -1;
+  }
+
+  legend {
+    margin-bottom: 34px;
+    background-color: #ffffff;
+    width: 225px;
+    padding: 0 20px;
+  }
+}
+
+.owner-info__list {
+  @include reset-list;
+}
+
+.owner-info__item + .owner-info__item {
+  padding-top: 14px;
+}
+
+.owner-info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+
+  input {
+    flex-grow: 1;
+  }
+}
+
+.owner-info__item--email {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    mask-image: url("/../images/icons/stack.svg#email-stroke");
+  }
+}
+
+.owner-info__item--tel {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: black;
+    mask-image: url("/../images/icons/stack.svg#phone-stroke");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .owner-info {
+    margin-bottom: 65px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: -89px;
+      background-color: $basic-green;
+      z-index: -1;
+    }
+
+    legend {
+      margin-bottom: 76px;
+      margin-left: 40px;
+      @include padding-container($tablet-width);
+      width: 580px;
+    }
+  }
+
+  .owner-info__list {
+    @include padding-container-form;
+  }
+
+  .owner-info__item + .owner-info__item {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .owner-info {
+    margin-bottom: 70px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: -90px;
+      background-color: $basic-green;
+      z-index: -1;
+    }
+
+    legend {
+      margin-bottom: 76px;
+      background-color: #ffffff;
+      margin-left: 80px;
+    }
+  }
+
+  .owner-info__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    padding: 0;
+  }
+
+  .owner-info__item + .owner-info__item {
+    padding-top: 0;
+  }
+}
+
+
